@@ -24,7 +24,7 @@ jobs:
 
       - name: Create Folder
         run: |
-          export MY_FOLDER=/tmp/Jean-Gaël Névès.09554bf2-eae7-0d00-9083-75440bec0189
+          export MY_FOLDER="/tmp/Jean-Gaël Névès.09554bf2-eae7-0d00-9083-75440bec0189"
           mkdir "$MY_FOLDER"
           cp Pharo.image "$MY_FOLDER"
           cp Pharo.image "$MY_FOLDER"/Pharo2.image
