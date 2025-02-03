@@ -38,4 +38,4 @@ jobs:
       - name: Run tests
         run: |
           rm -rf ~/Pharo # clean posssible remaining Pharo files
-	        $PHARO --headless Pharo.image test --junit-xml-output "PharoLauncher.*"	
+          $PHARO --headless Pharo.image test --junit-xml-output "PharoLauncher.*"	
