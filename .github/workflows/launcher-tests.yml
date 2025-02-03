@@ -46,7 +46,7 @@ jobs:
       - name: Run tests
         run: |
           rm -rf ~/Pharo # clean posssible remaining Pharo files
-          $PHARO --headless Pharo.image test --junit-xml-output "PharoLauncher.*"	
+          $PHARO --headless Pharo.image test --junit-xml-output "PharoLauncher-Tests-Functional.*"	
 
       - uses: actions/upload-artifact@v4  # upload test results
         if: success() || failure()        # run this step even if previous step failed
