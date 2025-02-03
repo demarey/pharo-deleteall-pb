@@ -27,6 +27,7 @@ jobs:
         with:
           repository: pharo-project/pharo-launcher
           ref: dev
+          fetch-depth: 0
 
       - uses: demarey/pharo-setup-gha@main
         with:
@@ -35,7 +36,6 @@ jobs:
       - name: Build image
         run: |
            ls .
-           cat .git/config
            $PHARO --headless Pharo.image eval --save "Metacello new baseline: 'PharoLauncher'; repository: 'gitlocal://src'; ignoreImage; onConflictUseIncoming; onWarning: [:ex | ex load]; load"
 
       - name: Run tests
