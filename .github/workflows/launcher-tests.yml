@@ -35,6 +35,7 @@ jobs:
       - name: Build image
         run: |
            ls .
+           cat .git/config
            $PHARO --headless Pharo.image eval --save "Metacello new baseline: 'PharoLauncher'; repository: 'gitlocal://src'; ignoreImage; onConflictUseIncoming; onWarning: [:ex | ex load]; load"
 
       - name: Run tests
